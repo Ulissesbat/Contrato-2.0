@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Gerador de contratos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Contrato</h1>
+
+        <!-- Vendedores -->
+        <fieldset id="vendedores" class="section-group">
+            <legend>Vendedores</legend>
+            <div class="vendedor">
+                <label>Nome do Vendedor:</label>
+                <input type="text" class="nomeVendedor" placeholder="Ex: João da Silva" />
+                <label>RG do Vendedor:</label>
+                <input type="text" class="rgVendedor" placeholder="Ex: 123456789 SSP-SP" />
+                <label>CPF do Vendedor:</label>
+                <input type="text" class="cpfVendedor" placeholder="Ex: 123.456.789-00" />
+                <label>Endereço do Vendedor:</label>
+                <input type="text" class="endVendedor" placeholder="Ex: Rua das Flores, 123" />
+                <label>Profissão do Vendedor:</label>
+                <input type="text" class="profVendedor" placeholder="Ex: lavrador(a)" />
+            </div>
+        </fieldset>
+        <div class="botoes-container">
+            <button id="addVendedorBtn">Adicionar Vendedor</button>
+        </div>
+
+        <!-- Compradores -->
+        <fieldset id="compradores" class="section-group">
+            <legend>Compradores</legend>
+            <div class="comprador">
+                <label>Nome do Comprador:</label>
+                <input type="text" class="nomeComprador" placeholder="Ex: Maria Souza" />
+                <label>RG do Comprador:</label>
+                <input type="text" class="rgComprador" placeholder="Ex: 987654321 SSP-RJ" />
+                <label>CPF do Comprador:</label>
+                <input type="text" class="cpfComprador" placeholder="Ex: 987.654.321-00" />
+                <label>Endereço do Comprador:</label>
+                <input type="text" class="endComprador" placeholder="Ex: Avenida Central, 456" />
+                <label>Profissão do Comprador:</label>
+                <input type="text" class="profComprador" placeholder="Ex: lavrador(a)" />
+            </div>
+        </fieldset>
+        <div class="botoes-container">
+            <button id="addCompradorBtn">Adicionar Comprador</button>
+        </div>
+
+        <!-- Dados do Sítio e demais -->
+        <fieldset class="section-group">
+            <legend>Dados do Sítio e Informações adicionais</legend>
+            <label>Nome do Sítio:</label>
+            <input id="nomeSitio" placeholder="Ex: Sitio Paraíso" />
+            <label>Região do Sítio:</label>
+            <input id="regSitio" placeholder="Ex: Região Norte" />
+            <label>Tamanho do Sítio (hectares):</label>
+            <input id="tamSitio" placeholder="Ex: 15,5" />
+            <label>Limite Norte:</label>
+            <input id="norte" placeholder="Ex: Fazenda Boa Vista" />
+            <label>Limite Sul:</label>
+            <input id="sul" placeholder="Ex: Rio Azul" />
+            <label>Limite Leste:</label>
+            <input id="leste" placeholder="Ex: Estrada Velha" />
+            <label>Limite Oeste:</label>
+            <input id="oeste" placeholder="Ex: Morro Verde" />
+            <label>Valor (R$):</label>
+            <input id="valor" placeholder="Ex: 250000,00" />
+            <label>Valor por extenso:</label>
+            <input id="valorReais" placeholder="Ex: Duzentos e cinquenta mil reais" />
+            <label>Comarca:</label>
+            <input id="comarca" placeholder="Ex: Salvador - BA" />
+            <label>Data:</label>
+            <input id="data" placeholder="Ex: 08 de Agosto de 2025" />
+        </fieldset>
+
+        <div class="botoes-container">
+            <button id="btnAtualizar">Atualizar Contrato (Visualizar)</button>
+            <button id="btnGerarPDF">Gerar PDF (A4)</button>
+            <button id="btnLimpar">Limpar Campos</button>
+        </div>
+
+        <hr />
+
+        <div id="contrato"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
