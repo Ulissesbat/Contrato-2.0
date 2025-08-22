@@ -1,0 +1,184 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; 
+    padding: 0;
+    background: #f0f2f5;
+    color: #333;
+  }
+  .container {
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 22pt;
+    color: #4a4a4a;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #847CF8;
+  }
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top: 12px;
+    color: #555;
+  }
+  input {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  input:focus {
+    border-color: #847CF8;
+    outline: none;
+    box-shadow: 0 0 5px rgba(132, 124, 248, 0.3);
+  }
+  
+  /* ESTILOS DOS BOTÕES COM A COR #847CF8 */
+  .botoes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+    justify-content: center;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 14px 24px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    background-color: #847CF8;
+    color: white;
+    min-width: 180px;
+  }
+  
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(132, 124, 248, 0.4);
+    background-color: #6b63d5;
+  }
+  
+  button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(132, 124, 248, 0.4);
+  }
+
+  /* Cada página do contrato */
+  .page {
+    position: relative;
+    font-size: 12pt;
+    line-height: 1.5;
+    text-align: justify;
+    padding: 2.5cm 3cm 2.5cm 3cm;
+    border: 7px solid #0000FF;  /* borda azul */
+    box-sizing: border-box;
+    background: white;
+    margin-bottom: 20px;
+    width: 210mm;      /* largura A4 */
+    height: 297mm;     /* altura A4 */
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  .conteudo {
+    position: relative;
+    z-index: 2;
+  }
+
+  .page:not(:first-child) {
+    page-break-before: always; /* Força quebra de página */
+  }
+
+  .titulo-contrato {
+    text-align: center;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 16pt;
+    margin-bottom: 25px;
+    text-decoration: underline;
+}
+
+  .paragrafo-inicial {
+    font-style: italic;
+    margin-left: 21ch;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #555;
+  }
+  .negrito {
+    font-weight: bold;
+    color: #4a4a4a;
+  }
+  .data-direita {
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #555;
+  }
+  .assinaturas {
+    text-align: center;
+    margin-top: 60px;
+  }
+  .assinaturas div {
+    margin-bottom: 40px;
+    color: #555;
+  }
+  .section-group {
+    border: 1px solid #e0e0e0;
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  .section-group legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4a4a4a;
+    padding: 0 12px;
+    font-size: 16px;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #847CF8, transparent);
+    margin: 30px 0;
+  }
+
+  /* Força A4 sem margens ao imprimir */
+  @media print {
+    body, html {
+      width: 210mm;
+      height: 297mm;
+    }
+    .page {
+      margin: 0;
+      padding: 2.5cm 3cm 2.5cm 3cm;
+      box-shadow: none;
+      page-break-after: always;
+    }
+    .container {
+      padding: 0;
+      max-width: none;
+      box-shadow: none;
+      border-radius: 0;
+    }
+    button {
+      display: none;
+    }
+  }
