@@ -1,4 +1,5 @@
-// Garante que os listeners sejam registrados após o DOM estar pronto
+
+
   document.addEventListener('DOMContentLoaded', () => {
     // Adicionar vendedor
     document.getElementById('addVendedorBtn').addEventListener('click', () => {
@@ -105,7 +106,7 @@
         <div class="conteudo">
           <div class="titulo-contrato">CONTRATO DE PROMESSA DE COMPRA E VENDA</div>
           <p class="paragrafo-inicial">${paragrafoInicial}</p>
-          <p><strong>CLÁUSULA 1ª:</strong> Na qualidade de possuidor (a) a justo título de um terreno situado no(a) "<span class="negrito">${nomeSitio}</span>", pertencente à região <span class="negrito">${regSitio}</span>, com área de <span class="negrito">${tamSitio}</span> hectares, limitando-se da seguinte forma: ao norte com <span class="negrito">${norte}</span>, ao sul com <span class="negrito">${sul}</span>, ao nascente com <span class="negrito">${leste}</span> e ao poente com <span class="negrito">${oeste}</span>.</p>
+          <p><strong>CLÁUSULA 1ª:</strong> Na qualidade de possuidor(a) a justo título de um terreno situado no(a) "<span class="negrito">${nomeSitio}</span>", pertencente à região <span class="negrito">${regSitio}</span>, com área de <span class="negrito">${tamSitio}</span> hectares, limitando-se da seguinte forma: ao norte com <span class="negrito">${norte}</span>, ao sul com <span class="negrito">${sul}</span>, ao nascente com <span class="negrito">${leste}</span> e ao poente com <span class="negrito">${oeste}</span>.</p>
           <p><strong>CLÁUSULA 2ª:</strong> O preço pela qual se compromete a vender é de R$ <span class="negrito">${valor}</span> (<span class="negrito">${valorReais}</span>), pagos à vista, neste ato em moeda corrente do país, pelo qual o Promitente Vendedor dá a mais plena e geral quitação.</p>
           <p><strong>CLÁUSULA 3ª:</strong> O imóvel cuja compra e venda é objeto deste contrato, fica desde já entregue ao (a) compromissário (a) comprador (a), que possuirá a título precário, até o momento que for outorgado à escritura pública, o que se fará oportunamente, sendo as despesas com escritura e registro por conta do (a) compromissário (a) comprador (a).</p>
         </div>
@@ -132,7 +133,7 @@
       document.getElementById('contrato').innerHTML = contratoHTML;
     });
 
-    // CORREÇÃO DA GERAÇÃO DE PDF
+
     document.getElementById('btnGerarPDF').addEventListener('click', function() {
       const elemento = document.getElementById('contrato');
 
